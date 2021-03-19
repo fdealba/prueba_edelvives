@@ -29,9 +29,6 @@ conversacion_santiago_y_zack = Conversation.create!()
 comunicado_felipe_y_pedro = Comunicado.create(asunto: 'hola', contenido: 'hola felipe como estas', receptor: felipe, creador: pedro, conversation: conversacion_felipe_y_pedro)
 comunicado_felipe_y_pedro2 = Comunicado.create(asunto: 'hola', contenido: 'hola pedro como estas', receptor: pedro, creador: felipe, conversation: conversacion_felipe_y_pedro)
 
-Adjunto.create!(comunicado: comunicado_felipe_y_pedro)
-Adjunto.create!(comunicado: comunicado_felipe_y_pedro)
-Adjunto.create!(comunicado: comunicado_felipe_y_pedro2)
 
 
 comunicado_hernan_y_julian = Comunicado.create(asunto: 'hola', contenido: 'hola hernan como estas', receptor: hernan, creador: julian, conversation: conversacion_hernan_y_julian)

@@ -3,14 +3,16 @@ module Api
     def mayor_de_edad
       comunicados = Comunicado.receptor_mayor_de_edad.map do |comunicado|
         {
-          "id": comunicado.id,
-          "asunto": comunicado.asunto,
-          "contenido": comunicado.contenido,
-          "created_at": comunicado.created_at,
-          "receptor": comunicado.receptor,
-          "creador": comunicado.creador,
-          "conversation_id": comunicado.conversation_id,
-          "adjuntos": comunicado.adjuntos.length
+          id: comunicado.id,
+          asunto: comunicado.asunto,
+          contenido: comunicado.contenido,
+          fecha_comunicado: comunicado.created_at,
+          receptor: {
+            nombre: comunicado.receptor.nombre,
+            fecha_nacimiento: comunicado.receptor.fecha_nacimiento
+          },
+          conversation_nro: comunicado.conversation_id,
+          adjuntos: comunicado.adjuntos.length
         }
       end
       render json: {
