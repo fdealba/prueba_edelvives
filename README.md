@@ -1,4 +1,8 @@
 
+Necesario para correr en local:
+
+``` Version 2.6.6 de ruby y Version 6+ Ruby on Rails ```
+``` Bundle | yarn | PostgreSQL ```
 
 Para correr el proyecto en local necesitamos primero clonarlo:
 
